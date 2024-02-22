@@ -1,9 +1,9 @@
 //
+// Adicionei um random para facilitar os testes.
 let xp = parseInt(Math.random() * 10100);
-console.log(xp)
-let heroi = "Pedro";
+let nome = "Pedro";
 
-const matriz = [
+const nivel = [
     ["Ferro", 1, 1000],
     ["Bronze", 1001, 2000],
     ["Prata", 2001, 5000],
@@ -14,12 +14,11 @@ const matriz = [
     ["Radiante", 10001, 10100]
 ];
 
-for(let contador = 0; contador < matriz.length; contador++){
-    //console.log(matriz[0][0])
-    //console.log(contador)
-    if(xp >= matriz[contador][1] && xp <= matriz[contador][2]){
-        //console.log(matriz[contador][1])
-        console.log("O heroi " + heroi + " é nivel " + matriz[contador][0])
+for(let contador = 0; contador < nivel.length; contador++){
+    if(xp >= nivel[contador][1] && xp <= nivel[contador][2]){
+        console.log(`O xp do herói é ${xp}`)
+        console.log(`O Herói de nome ${nome} está no nível de ${nivel[contador][0]}.`)
+        break
     }
 }
 
